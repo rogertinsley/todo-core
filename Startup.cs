@@ -28,7 +28,7 @@ namespace MyToDo
         {
             // Add framework services.
             services.AddMvc();
-            services.AddDbContext<TodoContext>(o => o.UseSqlite("Filename=./blog.db"));
+            services.AddDbContext<TodoContext>(o => o.UseSqlite("Filename=./todo.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

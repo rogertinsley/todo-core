@@ -8,7 +8,6 @@ namespace MyToDo.Model
             : base(options)
         { }
         
-        public DbSet<Todo> Blogs { get; set; }
-        public DbSet<Todo> Posts { get; set; }
+        public DbSet<Todo> Todos { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using MyToDo.Model;
 namespace mytodo.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20160517200244_Initial")]
+    [Migration("20160517202711_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace mytodo.Migrations
 
                     b.HasKey("TodoId");
 
-                    b.ToTable("Todo");
+                    b.ToTable("Todos");
                 });
         }
     }

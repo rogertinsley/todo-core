@@ -1,4 +1,6 @@
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using MyToDo.Model;
 
 namespace MyToDo.Controllers
 {
@@ -6,9 +8,9 @@ namespace MyToDo.Controllers
     {
         // GET: /<controller>/
         
-        public IActionResult Index()
+        public IActionResult Index([FromServices] TodoContext context)
         {
-            return View();
+            return View(context.Todos.ToList());
         }
     }
 }

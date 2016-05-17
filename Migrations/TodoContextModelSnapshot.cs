@@ -24,7 +24,7 @@ namespace mytodo.Migrations
 
                     b.HasKey("TodoId");
 
-                    b.ToTable("Todo");
+                    b.ToTable("Todos");
                 });
         }
     }
