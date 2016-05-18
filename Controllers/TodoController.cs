@@ -6,11 +6,29 @@ namespace MyToDo.Controllers
 {
     public class TodoController : Controller
     {
-        // GET: /<controller>/
+        // GET: /todo/
         
         public IActionResult Index([FromServices] TodoContext context)
         {
             return View(context.Todos.ToList());
+        }
+        
+        // GET: /todo/create
+        
+        public IActionResult Create()
+        {
+            return View(new Todo());
+        }
+        
+        // POST: /todo/create
+        
+        [HttpPost]
+        public IActionResult Create([FromServices] TodoContext context, Todo todo)
+        {
+            context.Todos.Add(todo);
+            context.SaveChanges();
+            
+            return RedirectToAction("Index");
         }
     }
 }

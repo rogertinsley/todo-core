@@ -1,0 +1,16 @@
+@model MyToDo.Model.Todo
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create an item</h2>
+
+<form asp-controller="Todo" asp-action="Create">
+      
+      @Html.EditorForModel()
+      
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+      
+</form>
