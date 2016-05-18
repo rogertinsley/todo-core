@@ -1,8 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace MyToDo.Model
 {
     public class Todo
     {
-        public int TodoId { get;set; }
+        [ScaffoldColumn(false)]
+        public int TodoId { get; set; }
+        
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
     }
 }
