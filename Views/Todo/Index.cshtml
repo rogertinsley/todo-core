@@ -11,6 +11,6 @@
 <ul>
 @foreach(var item in Model)
 {
-    <li>@item.Description</li>
+    <li>@item.Description - <a asp-action="Delete" asp-route-id="@item.TodoId">Delete</a></li>
 }
 </ul>

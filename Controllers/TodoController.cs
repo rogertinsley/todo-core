@@ -30,5 +30,16 @@ namespace MyToDo.Controllers
             
             return RedirectToAction("Index");
         }
+        
+        // GET: /todo/delete
+                
+        public IActionResult Delete([FromServices] TodoContext context, int id)
+        {
+            var entity = context.Todos.Single(t => t.TodoId == id);
+            context.Todos.Remove(entity);
+            context.SaveChanges();
+            
+            return RedirectToAction("Index");
+        }
     }
 }

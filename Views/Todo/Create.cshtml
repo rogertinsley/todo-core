@@ -6,8 +6,8 @@
 <h2>Create an item</h2>
 
 <form asp-controller="Todo" asp-action="Create">
-      
-      @Html.EditorForModel()
+
+    <textarea asp-for="Description" rows="5" cols="40"></textarea>
       
     <div>
         <input type="submit" value="Save" />
