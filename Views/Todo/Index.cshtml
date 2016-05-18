@@ -1,3 +1,16 @@
-<h1>view goes here!</h1>
+@model IEnumerable<MyToDo.Model.Todo>
+@{
+    ViewBag.Title = "Your todos";
+}
 
-<p>@Model.Count</p>
+@if (!Model.Any())
+{
+    <p>You've no items in your to do list</p>
+}
+    
+<ul>
+@foreach(var item in Model)
+{
+    <li>@item.Description</li>
+}
+</ul>
