@@ -17,6 +17,7 @@ namespace MyToDo.Controllers
         
         public IActionResult Create()
         {
+            // return the view
             return View(new Todo());
         }
         

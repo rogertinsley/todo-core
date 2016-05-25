@@ -18,7 +18,7 @@ namespace MyToDo
                 .UseStartup<Startup>()
                 .Build();
 
-            host.Run();
+	    host.Run();
         }
     }
 }
